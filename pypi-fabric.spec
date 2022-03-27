@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-fabric
-Version  : 2.6.0
-Release  : 18
-URL      : https://files.pythonhosted.org/packages/32/61/9a26b8f3dcdb5cb17daff57c9a85be6d5963d50488f45319d64a413da762/fabric-2.6.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/32/61/9a26b8f3dcdb5cb17daff57c9a85be6d5963d50488f45319d64a413da762/fabric-2.6.0.tar.gz
-Source1  : https://files.pythonhosted.org/packages/32/61/9a26b8f3dcdb5cb17daff57c9a85be6d5963d50488f45319d64a413da762/fabric-2.6.0.tar.gz.asc
+Version  : 2.7.0
+Release  : 19
+URL      : https://files.pythonhosted.org/packages/fc/c8/6a002a659d78db66ed134fd390773afd87a638026feef2c8efe6a4492776/fabric-2.7.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/fc/c8/6a002a659d78db66ed134fd390773afd87a638026feef2c8efe6a4492776/fabric-2.7.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/fc/c8/6a002a659d78db66ed134fd390773afd87a638026feef2c8efe6a4492776/fabric-2.7.0.tar.gz.asc
 Summary  : High level SSH command execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -18,9 +18,6 @@ Requires: pypi-fabric-license = %{version}-%{release}
 Requires: pypi-fabric-python = %{version}-%{release}
 Requires: pypi-fabric-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
-Provides: fabric
-Provides: fabric-python
-Provides: fabric-python3
 BuildRequires : pypi(invoke)
 BuildRequires : pypi(paramiko)
 BuildRequires : pypi(pathlib2)
@@ -68,15 +65,15 @@ python3 components for the pypi-fabric package.
 
 
 %prep
-%setup -q -n fabric-2.6.0
-cd %{_builddir}/fabric-2.6.0
+%setup -q -n fabric-2.7.0
+cd %{_builddir}/fabric-2.7.0
 
 %build
 export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1641435194
+export SOURCE_DATE_EPOCH=1648353173
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
@@ -92,7 +89,7 @@ python3 setup.py build
 export MAKEFLAGS=%{?_smp_mflags}
 rm -rf %{buildroot}
 mkdir -p %{buildroot}/usr/share/package-licenses/pypi-fabric
-cp %{_builddir}/fabric-2.6.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-fabric/eadf0675261da2116b63962716fbf09f4cb946ca
+cp %{_builddir}/fabric-2.7.0/LICENSE %{buildroot}/usr/share/package-licenses/pypi-fabric/eadf0675261da2116b63962716fbf09f4cb946ca
 python3 -tt setup.py build  install --root=%{buildroot}
 echo ----[ mark ]----
 cat %{buildroot}/usr/lib/python3*/site-packages/*/requires.txt || :
