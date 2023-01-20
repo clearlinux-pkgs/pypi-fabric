@@ -5,11 +5,11 @@
 # Source0 file verified with key 0x9C29BC560041E930 (jeff@bitprophet.org)
 #
 Name     : pypi-fabric
-Version  : 2.7.1
-Release  : 32
-URL      : https://files.pythonhosted.org/packages/1f/36/9969093324a67cee916f484eda7b3547e8f8e6077f5f2a1814cde80d6fc2/fabric-2.7.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/1f/36/9969093324a67cee916f484eda7b3547e8f8e6077f5f2a1814cde80d6fc2/fabric-2.7.1.tar.gz
-Source1  : https://files.pythonhosted.org/packages/1f/36/9969093324a67cee916f484eda7b3547e8f8e6077f5f2a1814cde80d6fc2/fabric-2.7.1.tar.gz.asc
+Version  : 3.0.0
+Release  : 33
+URL      : https://files.pythonhosted.org/packages/2f/84/dbcbc78055397a783134f56b30c70a61a645fae568d73ec7aa301f5f93fd/fabric-3.0.0.tar.gz
+Source0  : https://files.pythonhosted.org/packages/2f/84/dbcbc78055397a783134f56b30c70a61a645fae568d73ec7aa301f5f93fd/fabric-3.0.0.tar.gz
+Source1  : https://files.pythonhosted.org/packages/2f/84/dbcbc78055397a783134f56b30c70a61a645fae568d73ec7aa301f5f93fd/fabric-3.0.0.tar.gz.asc
 Summary  : High level SSH command execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -20,7 +20,6 @@ Requires: pypi-fabric-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(invoke)
 BuildRequires : pypi(paramiko)
-BuildRequires : pypi(pathlib2)
 # Suppress stripping binaries
 %define __strip /bin/true
 %define debug_package %{nil}
@@ -76,17 +75,16 @@ Requires: python3-core
 Provides: pypi(fabric)
 Requires: pypi(invoke)
 Requires: pypi(paramiko)
-Requires: pypi(pathlib2)
 
 %description python3
 python3 components for the pypi-fabric package.
 
 
 %prep
-%setup -q -n fabric-2.7.1
-cd %{_builddir}/fabric-2.7.1
+%setup -q -n fabric-3.0.0
+cd %{_builddir}/fabric-3.0.0
 pushd ..
-cp -a fabric-2.7.1 buildavx2
+cp -a fabric-3.0.0 buildavx2
 popd
 
 %build
@@ -94,7 +92,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1673967002
+export SOURCE_DATE_EPOCH=1674259047
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
