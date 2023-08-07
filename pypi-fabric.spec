@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-fabric
-Version  : 3.1.0
-Release  : 35
-URL      : https://files.pythonhosted.org/packages/d8/b0/fc6880fd6e24b60ccb5e3e1b673cec847d56b8176311f77c63f542fe9fd4/fabric-3.1.0.tar.gz
-Source0  : https://files.pythonhosted.org/packages/d8/b0/fc6880fd6e24b60ccb5e3e1b673cec847d56b8176311f77c63f542fe9fd4/fabric-3.1.0.tar.gz
+Version  : 3.2.1
+Release  : 36
+URL      : https://files.pythonhosted.org/packages/34/6a/8e8734a47dad3cf6cbf4ba8631340814cd374ea58452133a62714dc6338b/fabric-3.2.1.tar.gz
+Source0  : https://files.pythonhosted.org/packages/34/6a/8e8734a47dad3cf6cbf4ba8631340814cd374ea58452133a62714dc6338b/fabric-3.2.1.tar.gz
 Summary  : High level SSH command execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -17,6 +17,7 @@ Requires: pypi-fabric-python = %{version}-%{release}
 Requires: pypi-fabric-python3 = %{version}-%{release}
 BuildRequires : buildreq-distutils3
 BuildRequires : pypi(decorator)
+BuildRequires : pypi(deprecated)
 BuildRequires : pypi(invoke)
 BuildRequires : pypi(paramiko)
 # Suppress stripping binaries
@@ -73,6 +74,7 @@ Group: Default
 Requires: python3-core
 Provides: pypi(fabric)
 Requires: pypi(decorator)
+Requires: pypi(deprecated)
 Requires: pypi(invoke)
 Requires: pypi(paramiko)
 
@@ -81,10 +83,10 @@ python3 components for the pypi-fabric package.
 
 
 %prep
-%setup -q -n fabric-3.1.0
-cd %{_builddir}/fabric-3.1.0
+%setup -q -n fabric-3.2.1
+cd %{_builddir}/fabric-3.2.1
 pushd ..
-cp -a fabric-3.1.0 buildavx2
+cp -a fabric-3.2.1 buildavx2
 popd
 
 %build
@@ -92,7 +94,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1685119143
+export SOURCE_DATE_EPOCH=1691427213
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib

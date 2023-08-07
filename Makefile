@@ -1,5 +1,5 @@
 PKG_NAME := pypi-fabric
-URL = https://files.pythonhosted.org/packages/d8/b0/fc6880fd6e24b60ccb5e3e1b673cec847d56b8176311f77c63f542fe9fd4/fabric-3.1.0.tar.gz
+URL = https://files.pythonhosted.org/packages/34/6a/8e8734a47dad3cf6cbf4ba8631340814cd374ea58452133a62714dc6338b/fabric-3.2.1.tar.gz
 ARCHIVES = 
 
 include ../common/Makefile.common
