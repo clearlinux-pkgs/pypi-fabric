@@ -4,10 +4,10 @@
 # Using build pattern: distutils3
 #
 Name     : pypi-fabric
-Version  : 3.2.1
-Release  : 36
-URL      : https://files.pythonhosted.org/packages/34/6a/8e8734a47dad3cf6cbf4ba8631340814cd374ea58452133a62714dc6338b/fabric-3.2.1.tar.gz
-Source0  : https://files.pythonhosted.org/packages/34/6a/8e8734a47dad3cf6cbf4ba8631340814cd374ea58452133a62714dc6338b/fabric-3.2.1.tar.gz
+Version  : 3.2.2
+Release  : 37
+URL      : https://files.pythonhosted.org/packages/0d/3f/337f278b70ba339c618a490f6b8033b7006c583bd197a897f12fbc468c51/fabric-3.2.2.tar.gz
+Source0  : https://files.pythonhosted.org/packages/0d/3f/337f278b70ba339c618a490f6b8033b7006c583bd197a897f12fbc468c51/fabric-3.2.2.tar.gz
 Summary  : High level SSH command execution
 Group    : Development/Tools
 License  : BSD-2-Clause
@@ -83,10 +83,10 @@ python3 components for the pypi-fabric package.
 
 
 %prep
-%setup -q -n fabric-3.2.1
-cd %{_builddir}/fabric-3.2.1
+%setup -q -n fabric-3.2.2
+cd %{_builddir}/fabric-3.2.2
 pushd ..
-cp -a fabric-3.2.1 buildavx2
+cp -a fabric-3.2.2 buildavx2
 popd
 
 %build
@@ -94,7 +94,7 @@ export http_proxy=http://127.0.0.1:9/
 export https_proxy=http://127.0.0.1:9/
 export no_proxy=localhost,127.0.0.1,0.0.0.0
 export LANG=C.UTF-8
-export SOURCE_DATE_EPOCH=1691427213
+export SOURCE_DATE_EPOCH=1693494625
 export GCC_IGNORE_WERROR=1
 export AR=gcc-ar
 export RANLIB=gcc-ranlib
