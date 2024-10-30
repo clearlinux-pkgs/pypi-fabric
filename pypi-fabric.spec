@@ -5,7 +5,7 @@
 #
 Name     : pypi-fabric
 Version  : 3.2.2
-Release  : 39
+Release  : 40
 URL      : https://files.pythonhosted.org/packages/0d/3f/337f278b70ba339c618a490f6b8033b7006c583bd197a897f12fbc468c51/fabric-3.2.2.tar.gz
 Source0  : https://files.pythonhosted.org/packages/0d/3f/337f278b70ba339c618a490f6b8033b7006c583bd197a897f12fbc468c51/fabric-3.2.2.tar.gz
 Summary  : High level SSH command execution
